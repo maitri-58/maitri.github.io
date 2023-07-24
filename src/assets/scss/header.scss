@@ -1,0 +1,22 @@
+@import "colors";
+@import "fonts";
+
+.site-header {
+  background: $black;
+  .site-logo {
+    width: 33px;
+  }
+  .email-link {
+    color: $white;
+  }
+  .header-menu {
+    li {
+      a {
+        color: $white;
+        .icon-wrap {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

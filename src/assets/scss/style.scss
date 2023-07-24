@@ -1,0 +1,31 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+@import "colors";
+@import "fonts";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+.main-wrap,
+.App {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $primary-font;
+  margin: 0;
+  color: $primary-color;
+  overflow-x: hidden;
+}
+
+ul,
+p {
+  margin: 0;
+}

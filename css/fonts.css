@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+.font-primary {
+  font-family: "Roboto", sans-serif;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fs-14 {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.fs-18 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.fs-16 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.fs-22 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.fs-30 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.fs-50 {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.fs-70 {
+  font-size: 70px;
+  line-height: 75px;
+}/*# sourceMappingURL=fonts.css.map */
