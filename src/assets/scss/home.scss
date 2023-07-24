@@ -1,0 +1,39 @@
+@import "colors";
+
+.home-page {
+  height: calc(100% - 65px);
+  background: linear-gradient(90deg, $bg-light 42%, transparent 42%);
+  .its-me-label {
+    background: $black;
+    color: $white;
+    padding: 15px 25px 15px 10px;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      border: 8px solid;
+      border-color: $black transparent transparent;
+      top: 100%;
+      right: 13px;
+    }
+  }
+  .name {
+    color: $primary-color;
+  }
+  .designation {
+    color: $black;
+  }
+  .portrait-wrap {
+    height: 470px;
+    width: 470px;
+    -webkit-clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%
+    );
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+}

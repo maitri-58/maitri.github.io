@@ -1,0 +1,55 @@
+@import "../../assets/scss/colors.scss";
+
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $bg-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  z-index: 14;
+  transition: opacity 1s ease;
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .content {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      line-height: 65px;
+      color: $secondary-color;
+      font-weight: 700;
+      width: 100%;
+    }
+    p {
+      color: $secondary-color;
+      font-size: 20px;
+      line-height: 24px;
+      width: 100%;
+    }
+  }
+  .gear {
+    animation: rotate1 4s infinite linear;
+    path {
+      fill: $secondary-color;
+    }
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
