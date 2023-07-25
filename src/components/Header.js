@@ -22,7 +22,7 @@ const Header = () => {
             <motion.img
               src={logoImg}
               alt="logo"
-              className="w-full h-auto"
+              className="w-100 h-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{

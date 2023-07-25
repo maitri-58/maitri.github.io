@@ -32,8 +32,8 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      <div className="container h-full">
-        <div className="row align-items-center h-full">
+      <div className="container h-100">
+        <div className="row align-items-center h-100">
           <div className="col-md-6 d-flex aling-items-center">
             <div className="about-me">
               <motion.span
@@ -88,7 +88,7 @@ const Home = () => {
                 delay: 1.4,
               }}
             >
-              <img src={portraitImg} alt="portrait-img" />
+              <img src={portraitImg} alt="portrait-img" className="w-100 h-auto" />
             </motion.div>
           </div>
         </div>
