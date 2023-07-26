@@ -5,18 +5,107 @@
   background: $black;
   .site-logo {
     width: 33px;
+    @include bp(sm-max) {
+      width: 25px;
+    }
   }
   .email-link {
     color: $white;
   }
+  .humburg-menu {
+    width: 26px;
+    height: 20px;
+    position: relative;
+    display: none;
+    z-index: 3;
+    cursor: pointer;
+    @include bp(sm-max) {
+      display: block;
+    }
+    span,
+    &:after,
+    &:before {
+      transition: all 0.3s ease;
+      display: block;
+      height: 2px;
+      position: absolute;
+      content: "";
+      right: 0;
+      background: $white;
+      width: 100%;
+    }
+    span {
+      width: calc(100% - 5px);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    &::after {
+      transform: rotate(0);
+      bottom: 0;
+    }
+  }
   .header-menu {
+    @include bp(sm-max) {
+      position: absolute;
+      right: 0;
+      top: 24px;
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
     li {
       a {
         color: $white;
+        @include bp(sm-max) {
+          justify-content: flex-end;
+        }
         .icon-wrap {
           width: 20px;
         }
       }
+    }
+    &::after {
+      @include bp(sm-max) {
+        content: "";
+        position: absolute;
+        width: 330px;
+        height: 370px;
+        z-index: -1;
+        left: -70%;
+        top: -190%;
+        background: $primary-color1;
+        border-radius: 50%;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}
+
+.menu-open {
+  .humburg-menu {
+    // right: 30px;
+    span {
+      width: 0;
+    }
+    &::before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+  }
+  .header-menu {
+    opacity: 1;
+    // padding-right: 30px;
+    &::after {
+      top: -190%;
+      left: -60%;
     }
   }
 }

@@ -7,18 +7,18 @@ import "../assets/scss/header.scss";
 
 /* import images */
 import logoImg from "../assets/images/logo-white.png";
-import workIcon from "../assets/images/svg/work.svg";
-import resumeIcon from "../assets/images/svg/resume.svg";
-import shelfIcon from "../assets/images/svg/shelf.svg";
 import FadeIn from "./animations/FadeIn";
 import { headerMenuList } from "../mock/mock";
 
 const Header = () => {
+  const toggleMenu = () => {
+    document.body.classList.toggle("menu-open");
+  };
   return (
     <div className="site-header">
       <div className="d-flex align-items-center justify-content-between container py-md-3 py-2">
         <div className="d-flex flex-row align-items-center justify-content-between left-block">
-          <Link to={"/"} className="d-inline-block me-5 site-logo">
+          <Link to={"/"} className="d-inline-block me-md-5 me-3 site-logo">
             <motion.img
               src={logoImg}
               alt="logo"
@@ -31,26 +31,40 @@ const Header = () => {
               }}
             />
           </Link>
-          <Link to={"/"} className="email-link fw-normal fs-18">
+          <a
+            href="mailTo:mait.ch1997@gmail.com"
+            className="email-link fw-normal fs-18"
+          >
             <FadeIn>mait.ch1997@gmail.com</FadeIn>
-          </Link>
+          </a>
         </div>
-        <div className="right-block">
-          <ul className="d-flex flex-row header-menu">
+        <div className="right-block position-relative">
+          <span className="humburg-menu" onClick={toggleMenu}>
+            <span></span>
+          </span>
+          <ul className="d-flex flex-md-row flex-column header-menu mt-4 mt-md-0">
             {headerMenuList?.map((menuItem, idx) => {
               return (
-                <li className="me-md-3 me-2" key={idx}>
+                <li className="me-md-3 me-md-2 mb-2 mb-md-0" key={idx}>
                   <FadeIn>
-                    <Link
-                      to={menuItem?.url}
+                    <a
+                      href="javascript:void(0)"
+                      // to={`${menuItem?.url}`}
                       title={menuItem?.title}
                       className="d-flex align-items-center fs-16 fw-normal"
                     >
                       <i className="d-inline-block me-2 icon-wrap">
-                        <img src={`../assets/images/svg/${menuItem?.icon}`} alt="" />
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            `/images/svg/${menuItem?.icon}`
+                          }
+                          alt=""
+                          className="w-100 h-100"
+                        />
                       </i>
                       {menuItem?.title}
-                    </Link>
+                    </a>
                   </FadeIn>
                 </li>
               );

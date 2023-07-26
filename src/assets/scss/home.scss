@@ -1,13 +1,17 @@
+@import "break-points";
 @import "colors";
 
-.home-page {
-  height: calc(100% - 65px);
+.home-section {
+  height: 100%;
   background: linear-gradient(90deg, $bg-light 42%, transparent 42%);
   .its-me-label {
     background: $black;
     color: $white;
     padding: 15px 25px 15px 10px;
     position: relative;
+    @include bp(xxl-max) {
+      padding: 11px 16px 11px 7px;
+    }
     &:after {
       position: absolute;
       content: "";
@@ -35,5 +39,9 @@
       0% 25%
     );
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    @include bp(xxl-max) {
+      height: 370px;
+      width: 370px;
+    }
   }
 }

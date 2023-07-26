@@ -1,18 +1,18 @@
 export const headerMenuList = [
   {
-    title: "Work",
-    url: "/work",
+    title: "Home",
+    url: "/home",
     icon: "work.svg"
+  },
+  {
+    title: "About",
+    url: "/about",
+    icon: "shelf.svg"
   },
   {
     title: "Resume",
     url: "/resume",
     icon: "resume.svg"
-  },
-  {
-    title: "Shelf",
-    url: "/shelf",
-    icon: "shelf.svg"
   },
 ]
 

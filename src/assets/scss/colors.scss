@@ -2,6 +2,15 @@ $black: #000000;
 $white: #ffffff;
 
 $primary-color: #fb6869;
+$primary-color1: #ef4345;
 $secondary-color: #201e20;
 $bg-light: #f1dfd3;
 $black1: #2b2929;
+
+.color-primary {
+  color: $primary-color;
+}
+
+.color-black1 {
+  color: #2b2929;
+}
