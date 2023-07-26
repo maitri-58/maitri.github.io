@@ -33,7 +33,7 @@ const About = () => {
   return (
     <>
       <div className="about-section d-flex align-items-center justify-content-center h-100 py-4">
-        <div className="container">
+        <div className="container-lg">
           <motion.h2
             className="fs-70 color-primary text-center mb-4"
             initial={{ opacity: 0, scale: 0.7 }}

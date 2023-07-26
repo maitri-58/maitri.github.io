@@ -4,6 +4,9 @@
 .home-section {
   height: 100%;
   background: linear-gradient(90deg, $bg-light 42%, transparent 42%);
+  @include bp(md-max) {
+    background: none;
+  }
   .its-me-label {
     background: $black;
     color: $white;
@@ -42,6 +45,19 @@
     @include bp(xxl-max) {
       height: 370px;
       width: 370px;
+    }
+    @include bp(xl-max) {
+      height: 340px;
+      width: 340px;
+    }
+    @include bp(lg-max) {
+      height: 290px;
+      width: 290px;
+    }
+    @include bp(md-max) {
+      // transform: none !important;
+      height: 253px;
+      width: 253px;
     }
   }
 }

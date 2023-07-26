@@ -16,7 +16,7 @@ const Header = () => {
   };
   return (
     <div className="site-header">
-      <div className="d-flex align-items-center justify-content-between container py-md-3 py-2">
+      <div className="d-flex align-items-center justify-content-between container-lg py-md-3 py-2">
         <div className="d-flex flex-row align-items-center justify-content-between left-block">
           <Link to={"/"} className="d-inline-block me-md-5 me-3 site-logo">
             <motion.img
@@ -45,7 +45,12 @@ const Header = () => {
           <ul className="d-flex flex-md-row flex-column header-menu mt-4 mt-md-0">
             {headerMenuList?.map((menuItem, idx) => {
               return (
-                <li className="me-md-3 me-md-2 mb-2 mb-md-0" key={idx}>
+                <li
+                  className={`${
+                    idx !== headerMenuList?.length - 1 ? "me-md-3 me-md-2" : ""
+                  } mb-2 mb-md-0`}
+                  key={idx}
+                >
                   <FadeIn>
                     <a
                       href="javascript:void(0)"

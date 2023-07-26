@@ -3,8 +3,8 @@
 @import "fonts";
 
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
 }
 
 html,
@@ -51,4 +51,9 @@ ul {
 .portfolio-section {
   height: 100%;
   // height: calc(100% - 65px);
+}
+.custom-md-order-2 {
+  @include bp(md-max) {
+    order: 2;
+  }
 }

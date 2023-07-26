@@ -33,12 +33,12 @@ const Home = () => {
   return (
     <>
       <div className="home-section">
-        <div className="container h-100">
-          <div className="row align-items-center h-100">
-            <div className="col-md-6 d-flex aling-items-center">
+        <div className="container-lg h-100">
+          <div className="row align-items-center align-content-center h-100">
+            <div className="col-md-6 d-flex aling-items-center custom-md-order-2">
               <div className="about-me">
                 <motion.span
-                  className="d-inline-block mb-4 rounded-3 fs-16 fw-normal its-me-label ms-4"
+                  className="d-inline-block mb-xxl-4 mb-3 rounded-3 fs-16 fw-normal its-me-label ms-4"
                   initial={{ scale: "0" }}
                   animate={{ scale: "100%" }}
                   transition={{
@@ -49,7 +49,7 @@ const Home = () => {
                   It's me
                 </motion.span>
                 <motion.p
-                  className="fs-70 fw-bold name mb-3"
+                  className="fs-70 fw-bold name mb-xxl-3 mb-2"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{
@@ -57,7 +57,7 @@ const Home = () => {
                     delay: 2.4,
                   }}
                 >
-                  Maitri H. Champaneri
+                  Maitri <span className="d-block">Champaneri</span>
                 </motion.p>
                 <motion.p
                   className="fs-22 fw-medium text-uppercase designation"
@@ -79,7 +79,7 @@ const Home = () => {
                 </motion.p>
               </div>
             </div>
-            <div className="col-md-6 d-flex align-items-center justify-content-center">
+            <div className="col-md-6 d-flex align-items-center justify-content-center mt-md-0 mt-3">
               <motion.div
                 className="portrait-wrap"
                 initial={{ translateX: "160%" }}
@@ -98,9 +98,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <i className="down-btn">
-
-        </i>
+        <i className="down-btn"></i>
       </div>
     </>
   );
