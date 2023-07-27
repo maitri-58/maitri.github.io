@@ -7,7 +7,9 @@ import Resume from "../resume";
 
 const Landing = () => {
   const wrapRef = useRef(null);
-  let scrollDown = null;
+  let scrollDown = null,
+    touchStartY,
+    touchEndY;
 
   const slideToNext = () => {
     const activeDiv = document.querySelector(`.portfolio-section.active`),
@@ -58,6 +60,7 @@ const Landing = () => {
       }
     });
     createWheelStopListener(window, function () {
+      alert();
       if (scrollDown) {
         slideToPrev();
       } else {
@@ -72,6 +75,21 @@ const Landing = () => {
         slideToNext();
       }
       if (event.code === "ArrowUp") {
+        slideToPrev();
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("touchstart", (event) => {
+      touchStartY = event?.changedTouches?.[0]?.clientY;
+    });
+    window.addEventListener("touchend", (event) => {
+      touchEndY = event?.changedTouches?.[0]?.clientY;
+      if (touchEndY < touchStartY) {
+        slideToNext();
+      }
+      if (touchEndY > touchStartY) {
         slideToPrev();
       }
     });
