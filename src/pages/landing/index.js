@@ -60,7 +60,6 @@ const Landing = () => {
       }
     });
     createWheelStopListener(window, function () {
-      alert();
       if (scrollDown) {
         slideToPrev();
       } else {

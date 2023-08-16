@@ -1,0 +1,13 @@
+@import "colors";
+
+.resume-section {
+  .resume-table {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    table-layout: fixed;
+    table {
+      width: 100%;
+    }
+  }
+}
