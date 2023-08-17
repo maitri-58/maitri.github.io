@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Home from "../home";
 import About from "../about";
-import Resume from "../resume";
+import Skills from "../skills";
 
 const Landing = () => {
   const wrapRef = useRef(null);
@@ -106,7 +106,7 @@ const Landing = () => {
             <About />
           </section>
           <section className="portfolio-section" id={"section-2"}>
-            <Resume />
+            <Skills />
           </section>
         </div>
       </div>
