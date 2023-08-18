@@ -10,8 +10,8 @@ export const headerMenuList = [
     icon: "shelf.svg"
   },
   {
-    title: "Resume",
-    url: "/resume",
+    title: "Skills",
+    url: "/skills",
     icon: "resume.svg"
   },
 ]

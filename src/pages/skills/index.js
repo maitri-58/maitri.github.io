@@ -32,7 +32,7 @@ const Skills = ({}) => {
       <div className="skills-section d-flex align-items-center justify-content-center h-100 py-4">
         <div className="container-lg">
           <motion.h2
-            className="fs-70 color-primary text-center mb-4"
+            className="fs-70 text-center mb-5 pb-3 text-gray-dark"
             initial={{ opacity: 0, translateX: 0.7 }}
             whileInView={{ opacity: 1, translateX: 1 }}
             viewport={{ once: true }}
@@ -41,11 +41,11 @@ const Skills = ({}) => {
               delay: 0.3,
             }}
           >
-            Skills
+            <span className="d-inline-block position-relative section-title fw-bold">Skills</span>
           </motion.h2>
           <ul className="d-flex flex-wrap align-items-center justify-content-center skills-list">
             <motion.li
-              className="my-2 mx-1"
+              className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
               viewport={{ once: true }}
@@ -57,8 +57,8 @@ const Skills = ({}) => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
-                width="200"
-                height="200"
+                width="160"
+                height="160"
               >
                 <title>HTML5 Logo</title>
                 <path d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6" />
@@ -78,7 +78,7 @@ const Skills = ({}) => {
               </svg>
             </motion.li>
             <motion.li
-              className="my-2 mx-1"
+              className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
               viewport={{ once: true }}
@@ -88,8 +88,8 @@ const Skills = ({}) => {
               }}
             >
               <svg
-                width="200"
-                height="200"
+                width="160"
+                height="160"
                 viewBox="0 0 362.73401 511.99998"
                 version="1.1"
               >
@@ -137,7 +137,7 @@ const Skills = ({}) => {
               </svg>
             </motion.li>
             <motion.li
-              className="my-2 mx-1"
+              className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
               viewport={{ once: true }}
@@ -149,15 +149,15 @@ const Skills = ({}) => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 630 630"
-                width="200"
-                height="200"
+                width="160"
+                height="160"
               >
                 <rect width="630" height="630" fill="#f7df1e" />
                 <path d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z" />
               </svg>
             </motion.li>
             <motion.li
-              className="my-2 mx-1"
+              className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
               viewport={{ once: true }}
@@ -506,7 +506,7 @@ const Skills = ({}) => {
               </svg>
             </motion.li>
             <motion.li
-              className="my-2 mx-1"
+              className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
               viewport={{ once: true }}
@@ -516,8 +516,8 @@ const Skills = ({}) => {
               }}
             >
               <svg
-                width="200"
-                height="200"
+                width="160"
+                height="160"
                 viewBox="-10.5 -9.45 21 18.9"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -532,7 +532,7 @@ const Skills = ({}) => {
               </svg>
             </motion.li>
             <motion.li
-              className="my-2 mx-1"
+              className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
               viewport={{ once: true }}
@@ -542,8 +542,8 @@ const Skills = ({}) => {
               }}
             >
               <svg
-                width="200"
-                height="200"
+                width="160"
+                height="160"
                 viewBox="0 0 256 256"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="xMinYMin meet"

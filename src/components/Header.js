@@ -33,7 +33,7 @@ const Header = () => {
           </Link>
           <a
             href="mailTo:mait.ch1997@gmail.com"
-            className="email-link fw-normal fs-18"
+            className="email-link fs-18"
           >
             <FadeIn>mait.ch1997@gmail.com</FadeIn>
           </a>
@@ -42,32 +42,21 @@ const Header = () => {
           <span className="humburg-menu" onClick={toggleMenu}>
             <span></span>
           </span>
-          <ul className="d-flex flex-md-row flex-column header-menu mt-4 mt-md-0">
+          <ul className="d-flex flex-md-row flex-column align-items-md-start align-items-center justify-content-md-start justify-content-center header-menu">
             {headerMenuList?.map((menuItem, idx) => {
               return (
                 <li
                   className={`${
-                    idx !== headerMenuList?.length - 1 ? "me-md-3 me-md-2" : ""
-                  } mb-2 mb-md-0`}
+                    idx !== headerMenuList?.length - 1 ? "me-md-4" : ""
+                  } mb-4 mb-md-0 position-relative`}
                   key={idx}
                 >
                   <FadeIn>
                     <a
-                      href="javascript:void(0)"
-                      // to={`${menuItem?.url}`}
+                      href={`#section-${idx}`}
                       title={menuItem?.title}
-                      className="d-flex align-items-center fs-16 fw-normal"
+                      className="d-flex align-items-center fs-16 position-relative"
                     >
-                      <i className="d-inline-block me-2 icon-wrap">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            `/images/svg/${menuItem?.icon}`
-                          }
-                          alt=""
-                          className="w-100 h-100"
-                        />
-                      </i>
                       {menuItem?.title}
                     </a>
                   </FadeIn>

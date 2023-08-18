@@ -1,24 +1,12 @@
 $black: #000000;
 $white: #ffffff;
+$gray-dark: #035660;
 
-$primary-color: #fb6869;
-$primary-color1: #ef4345;
-$secondary-color: #201e20;
-$bg-light: #f1dfd3;
-$black1: #2b2929;
-
-.color-primary {
-  color: $primary-color;
+.text-gray-dark {
+  color: $gray-dark;
 }
 
-.color-black1 {
-  color: $black1;
+.bg-gray-dark {
+  background: $gray-dark;
 }
 
-.bg-light-color {
-  background: $bg-light;
-}
-
-.bg-primary-color {
-  background: $primary-color;
-}

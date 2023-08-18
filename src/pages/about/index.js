@@ -35,7 +35,7 @@ const About = () => {
       <div className="about-section d-flex align-items-center justify-content-center h-100 py-4">
         <div className="container-lg">
           <motion.h2
-            className="fs-70 color-primary text-center mb-4"
+            className="fs-70 text-center mb-5 pb-5 text-gray-dark"
             initial={{ opacity: 0, scale: 0.7 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -45,10 +45,10 @@ const About = () => {
               delay: 0.3,
             }}
           >
-            About Me
+            <span className="d-inline-block position-relative section-title fw-bold">About Me</span>
           </motion.h2>
           <motion.p
-            className="about text-center fs-18"
+            className="about text-center fs-22"
             initial={{ opacity: 0, y: "10px" }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -64,7 +64,7 @@ const About = () => {
             <a
               href="https://viitorcloud.com/"
               target="_blank"
-              className="color-black1 text-decoration-underline"
+              className="text-decoration-underline text-gray-dark"
             >
               ViitorCloud Technologies
             </a>{" "}
@@ -73,7 +73,7 @@ const About = () => {
             <a
               href="https://www.tatvasoft.com/"
               target="_blank"
-              className="color-black1 text-decoration-underline"
+              className="text-decoration-underline text-gray-dark"
             >
               Tatvasoft
             </a>{" "}

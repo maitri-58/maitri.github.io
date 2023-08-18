@@ -25,7 +25,7 @@ a {
 body {
   font-family: $primary-font;
   margin: 0;
-  color: $black1;
+  color: $black;
   overflow-x: hidden;
   overscroll-behavior-y: contain;
 }
@@ -56,5 +56,18 @@ ul {
 .custom-md-order-2 {
   @include bp(md-max) {
     order: 2;
+  }
+}
+
+.section-title {
+  &::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 9px);
+    background: $black;
   }
 }

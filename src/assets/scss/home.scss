@@ -3,17 +3,17 @@
 
 .home-section {
   height: 100%;
-  background: linear-gradient(90deg, $bg-light 42%, transparent 42%);
+  background: linear-gradient(90deg, $gray-dark 42%, transparent 42%);
   @include bp(md-max) {
     background: none;
   }
   .its-me-label {
     background: $black;
     color: $white;
-    padding: 15px 25px 15px 10px;
+    padding: 15px 17px 15px 17px;
     position: relative;
     @include bp(xxl-max) {
-      padding: 11px 16px 11px 7px;
+      padding: 11px 12px 11px 12px;
     }
     &:after {
       position: absolute;
@@ -25,7 +25,7 @@
     }
   }
   .name {
-    color: $primary-color;
+    color: $white;
   }
   .designation {
     color: $black;

@@ -9,7 +9,7 @@ const Splash = () => {
     }, 1000);
   });
   return (
-    <div className="splash" ref={splashRef}>
+    <div className="splash bg-gray-dark" ref={splashRef}>
       <div className="content">
         <svg
           className="gear"

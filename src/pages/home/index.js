@@ -38,7 +38,7 @@ const Home = () => {
             <div className="col-md-6 d-flex aling-items-center custom-md-order-2">
               <div className="about-me">
                 <motion.span
-                  className="d-inline-block mb-xxl-4 mb-3 rounded-3 fs-16 fw-normal its-me-label ms-4"
+                  className="d-inline-block mb-xxl-4 mb-3 rounded-3 fs-16 fw-normal its-me-label"
                   initial={{ scale: "0" }}
                   animate={{ scale: "100%" }}
                   transition={{
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
             <div className="col-md-6 d-flex align-items-center justify-content-center mt-md-0 mt-3">
               <motion.div
-                className="portrait-wrap"
+                className="portrait-wrap bg-gray-dark"
                 initial={{ translateX: "160%" }}
                 animate={{ translateX: "0%" }}
                 transition={{
@@ -89,11 +89,11 @@ const Home = () => {
                   delay: 1.4,
                 }}
               >
-                <img
+                {/* <img
                   src={portraitImg}
                   alt="portrait-img"
                   className="w-100 h-auto"
-                />
+                /> */}
               </motion.div>
             </div>
           </div>
