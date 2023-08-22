@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Home from "../home";
@@ -7,6 +7,7 @@ import Skills from "../skills";
 
 const Landing = () => {
   const wrapRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   let scrollDown = null,
     touchStartY,
     touchEndY;
@@ -21,6 +22,7 @@ const Landing = () => {
       wrapRef.current.style.transform = `translateY(calc(-${
         +activeIdx + 1
       } * 100%))`;
+      setActiveIndex(+activeIdx + 1);
     }
   };
 
@@ -34,6 +36,7 @@ const Landing = () => {
       wrapRef.current.style.transform = `translateY(calc(-${
         +activeIdx - 1
       } * 100%))`;
+      setActiveIndex(+activeIdx - 1);
     }
   };
 
@@ -96,7 +99,7 @@ const Landing = () => {
 
   return (
     <>
-      <Header />
+      <Header activeIndex={activeIndex} setActiveIndex={setActiveIndex} wrapRef={wrapRef} />
       <div className="sections-wrapper">
         <div className="sections-wrap" ref={wrapRef}>
           <section className="portfolio-section active" id={"section-0"}>

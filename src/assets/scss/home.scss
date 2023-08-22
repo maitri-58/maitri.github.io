@@ -24,11 +24,12 @@
       right: 13px;
     }
   }
-  .name {
-    color: $white;
-  }
+  .name,
   .designation {
-    color: $black;
+    color: $white;
+    @include bp(md-max) {
+      color: $black;
+    }
   }
   .portrait-wrap {
     height: 470px;

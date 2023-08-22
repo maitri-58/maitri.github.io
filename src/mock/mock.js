@@ -2,19 +2,24 @@ export const headerMenuList = [
   {
     title: "Home",
     url: "/home",
-    icon: "work.svg"
+    icon: "work.svg",
   },
   {
     title: "About",
     url: "/about",
-    icon: "shelf.svg"
+    icon: "shelf.svg",
   },
   {
     title: "Skills",
     url: "/skills",
-    icon: "resume.svg"
+    icon: "resume.svg",
   },
-]
+  {
+    title: "Work",
+    url: "/work",
+    icon: "resume.svg",
+  },
+];
 
 export const skillSet = [
   {
@@ -42,3 +47,17 @@ export const skillSet = [
     icon: "",
   },
 ];
+
+export const skillsSliderSettings = {
+  dots: true,
+  infinite: true,
+  repsponsive: [
+    {
+      breakpoint: 768,
+      settings: "unslick",
+    },
+  ],
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};

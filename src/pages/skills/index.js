@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 
 /* import css */
 import "../../assets/scss/skills.scss";
+import "../../../node_modules/slick-carousel/slick/slick.css";
+import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { skillsSliderSettings } from "../../mock/mock";
 
 const Skills = ({}) => {
   const line1 = "Frontend Developer";
@@ -32,7 +36,7 @@ const Skills = ({}) => {
       <div className="skills-section d-flex align-items-center justify-content-center h-100 py-4">
         <div className="container-lg">
           <motion.h2
-            className="fs-70 text-center mb-5 pb-3 text-gray-dark"
+            className="fs-70 text-center mb-md-5 mb-3 pb-3 text-gray-dark"
             initial={{ opacity: 0, translateX: 0.7 }}
             whileInView={{ opacity: 1, translateX: 1 }}
             viewport={{ once: true }}
@@ -41,10 +45,12 @@ const Skills = ({}) => {
               delay: 0.3,
             }}
           >
-            <span className="d-inline-block position-relative section-title fw-bold">Skills</span>
+            <span className="d-inline-block position-relative section-title fw-bold">
+              Skills
+            </span>
           </motion.h2>
-          <ul className="d-flex flex-wrap align-items-center justify-content-center skills-list">
-            <motion.li
+          <Slider {...skillsSliderSettings} className="skills-slider">
+            <motion.div
               className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
@@ -76,8 +82,8 @@ const Skills = ({}) => {
                   d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8"
                 />
               </svg>
-            </motion.li>
-            <motion.li
+            </motion.div>
+            <motion.div
               className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
@@ -135,8 +141,8 @@ const Skills = ({}) => {
                   </g>
                 </g>
               </svg>
-            </motion.li>
-            <motion.li
+            </motion.div>
+            <motion.div
               className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
@@ -155,8 +161,8 @@ const Skills = ({}) => {
                 <rect width="630" height="630" fill="#f7df1e" />
                 <path d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z" />
               </svg>
-            </motion.li>
-            <motion.li
+            </motion.div>
+            <motion.div
               className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
@@ -504,8 +510,8 @@ const Skills = ({}) => {
                   d="m469.6,126.22c-1.4453,0-2.3376-0.41259-1.9592-2.0972,0.34179-1.7236,1.4087-2.1338,2.8552-2.1338,1.3403,0,2.2681,0.41015,1.9263,2.1338-0.38086,1.6504-1.4795,2.0972-2.8223,2.0972z"
                 />
               </svg>
-            </motion.li>
-            <motion.li
+            </motion.div>
+            <motion.div
               className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
@@ -521,7 +527,7 @@ const Skills = ({}) => {
                 viewBox="-10.5 -9.45 21 18.9"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="mt-4 mb-3 text-link dark:text-link-dark w-24 lg:w-28 self-center text-sm me-0 flex origin-center transition-all ease-in-out"
+                className="mt-4 mb-3 text-link dark:text-link-dark w-24 lg:w-28 self-center text-sm me-0 flex origin-center transition-all ease-in-out"
               >
                 <circle cx="0" cy="0" r="2" fill="rgb(8, 126, 164)"></circle>
                 <g stroke="rgb(8, 126, 164)" stroke-width="1" fill="none">
@@ -530,8 +536,8 @@ const Skills = ({}) => {
                   <ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
                 </g>
               </svg>
-            </motion.li>
-            <motion.li
+            </motion.div>
+            <motion.div
               className="m-2"
               initial={{ opacity: 0, translateY: "30px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
@@ -554,8 +560,8 @@ const Skills = ({}) => {
                   fill="#FFF"
                 />
               </svg>
-            </motion.li>
-          </ul>
+            </motion.div>
+          </Slider>
         </div>
       </div>
     </>

@@ -1,9 +1,35 @@
 @import "colors";
+@import "break-points";
 
 .skills-section {
-  .skills-list {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+  .skills-slider {
+    text-align: center;
+    @include bp(md-min) {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .slick-slide {
+      @include bp(md-min) {
+        width: auto !important;
+      }
+    }
+    .slick-track {
+      @include bp(md-min) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: auto !important;
+        transform: none !important;
+      }
+    }
+    .slick-cloned,
+    .slick-dots,
+    .slick-arrow {
+      @include bp(md-min) {
+        display: none !important;
+      }
+    }
   }
 }

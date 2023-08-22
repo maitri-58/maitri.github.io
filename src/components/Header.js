@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -10,9 +10,14 @@ import logoImg from "../assets/images/logo-white.png";
 import FadeIn from "./animations/FadeIn";
 import { headerMenuList } from "../mock/mock";
 
-const Header = () => {
+const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
   const toggleMenu = () => {
     document.body.classList.toggle("menu-open");
+  };
+  const handleClick = (idx) => {
+    setActiveIndex(idx);
+    document.body.classList.remove("menu-open");
+    wrapRef.current.style.transform = `translateY(calc(-${idx} * 100%))`;
   };
   return (
     <div className="site-header">
@@ -31,10 +36,7 @@ const Header = () => {
               }}
             />
           </Link>
-          <a
-            href="mailTo:mait.ch1997@gmail.com"
-            className="email-link fs-18"
-          >
+          <a href="mailTo:mait.ch1997@gmail.com" className="email-link fs-18">
             <FadeIn>mait.ch1997@gmail.com</FadeIn>
           </a>
         </div>
@@ -48,12 +50,17 @@ const Header = () => {
                 <li
                   className={`${
                     idx !== headerMenuList?.length - 1 ? "me-md-4" : ""
-                  } mb-4 mb-md-0 position-relative`}
+                  } mb-4 mb-md-0 position-relative ${
+                    activeIndex === idx ? "active" : ""
+                  }`}
                   key={idx}
+                  onClick={() => {
+                    handleClick(idx);
+                  }}
                 >
                   <FadeIn>
                     <a
-                      href={`#section-${idx}`}
+                      href={"javascript:void(0)"}
                       title={menuItem?.title}
                       className="d-flex align-items-center fs-16 position-relative"
                     >
