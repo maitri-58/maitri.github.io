@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
 @import "break-points";
 
-$primary-font: "Fjalla One", sans-serif;
-$secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primary-font: "Roboto", sans-serif;
 
 .font-primary {
   font-family: $primary-font;
@@ -48,11 +47,6 @@ $secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 40px;
 }
 
-.fs-38 {
-  font-size: 38px;
-  line-height: 1.5em;
-}
-
 .fs-50 {
   font-size: 50px;
   line-height: 60px;
@@ -65,11 +59,11 @@ $secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 62px;
     line-height: 62px;
   }
-  @include bp(xl-max) {
+  @include bp(xl-max){
     font-size: 54px;
     line-height: 54px;
   }
-  @include bp(lg-max) {
+  @include bp(lg-max){
     font-size: 46px;
     line-height: 50px;
   }

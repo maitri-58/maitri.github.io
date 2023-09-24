@@ -1,7 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
 @import "colors";
 @import "fonts";
-@import "form-elements";
 
 * {
   box-sizing: border-box;
@@ -40,9 +39,8 @@ p {
 ul {
   list-style-type: none;
 }
-
 .sections-wrapper {
-  height: calc(100% - 84px);
+  height: calc(100% - 65px);
   overflow: hidden;
 }
 

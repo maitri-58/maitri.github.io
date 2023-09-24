@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import "../assets/scss/header.scss";
 
 /* import images */
-import logoImg from "../assets/images/logo.png";
+import logoImg from "../assets/images/logo-white.png";
 import FadeIn from "./animations/FadeIn";
 import { headerMenuList } from "../mock/mock";
 
@@ -22,20 +22,25 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
   return (
     <div className="site-header">
       <div className="d-flex align-items-center justify-content-between container-lg py-md-3 py-2">
-        <Link to={"/"} className="d-inline-block me-md-5 me-3 site-logo">
-          <motion.img
-            src={logoImg}
-            alt="logo"
-            className="w-100 h-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: 0.4,
-              delay: 1,
-            }}
-          />
-        </Link>
-        <div className="position-relative">
+        <div className="d-flex flex-row align-items-center justify-content-between left-block">
+          <Link to={"/"} className="d-inline-block me-md-5 me-3 site-logo">
+            <motion.img
+              src={logoImg}
+              alt="logo"
+              className="w-100 h-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                delay: 1,
+              }}
+            />
+          </Link>
+          <a href="mailTo:mait.ch1997@gmail.com" className="email-link fs-18">
+            <FadeIn>mait.ch1997@gmail.com</FadeIn>
+          </a>
+        </div>
+        <div className="right-block position-relative">
           <span className="humburg-menu" onClick={toggleMenu}>
             <span></span>
           </span>
@@ -57,7 +62,7 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
                     <a
                       href={"javascript:void(0)"}
                       title={menuItem?.title}
-                      className="d-flex align-items-center fs-18 position-relative"
+                      className="d-flex align-items-center fs-16 position-relative"
                     >
                       {menuItem?.title}
                     </a>
@@ -66,16 +71,6 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
               );
             })}
           </ul>
-        </div>
-        <div className="right-block">
-          <div className="d-block">
-            <a href="" className="email-link fs-18">
-              <FadeIn>07587537470</FadeIn>
-            </a>
-          </div>
-          <a href="mailTo:mait.ch1997@gmail.com" className="email-link fs-18">
-            <FadeIn>mait.ch1997@gmail.com</FadeIn>
-          </a>
         </div>
       </div>
     </div>

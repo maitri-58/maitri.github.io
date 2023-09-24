@@ -2,15 +2,15 @@
 @import "fonts";
 
 .site-header {
-  background: $white;
+  background: $black;
   .site-logo {
-    width: 44px;
+    width: 33px;
     @include bp(md-max) {
       width: 25px;
     }
   }
   .email-link {
-    color: $black;
+    color: $white;
   }
   .humburg-menu {
     width: 26px;
@@ -58,7 +58,7 @@
       height: 100%;
       z-index: 2;
       transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      background: $blue-light;
+      background: $gray-dark;
       padding: 50px 20px;
       transform: translateY(-100%);
     }
@@ -72,7 +72,7 @@
         z-index: 0;
         width: 100%;
         transition: all 0.3s;
-        background: $blue-light;
+        background: $gray-dark;
       }
       &:hover, &.active {
         &::after {
@@ -80,7 +80,7 @@
         }
       }
       a {
-        color: $black;
+        color: $white;
         z-index: 1;
         @include bp(md-max) {
           font-size: 26px;
