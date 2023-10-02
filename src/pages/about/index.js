@@ -99,7 +99,7 @@ const About = () => {
                 >
                   Tatvasoft
                 </a>{" "}
-                as a <i>Web Designer</i>. I love working in between product,
+                as a Web Designer. I love working in between product,
                 engineering and developer experience.
               </motion.p>
             </div>
