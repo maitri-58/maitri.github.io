@@ -20,7 +20,7 @@ function App() {
         />
         <Routes>
           <Route
-            path="/"
+            path="/portfolio"
             exact
             element={
               <Landing wrapRef={wrapRef} setActiveIndex={setActiveIndex} />

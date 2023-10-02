@@ -24,7 +24,7 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
   return (
     <div className="site-header">
       <div className="d-flex align-items-center justify-content-between container-lg py-md-3 py-2">
-        <Link to={"/"} className="d-inline-block me-md-5 me-3 site-logo">
+        <Link to={"/portfolio"} className="d-inline-block me-md-5 me-3 site-logo">
           <motion.img
             src={logoImg}
             alt="logo"
