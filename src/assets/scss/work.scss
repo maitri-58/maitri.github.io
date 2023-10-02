@@ -1,0 +1,59 @@
+@import "colors";
+
+.work-listing {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  .work-card {
+    width: calc(50% - 8px);
+    flex: 0 0 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+    margin: 0 0 16px;
+    .content-wrap {
+      box-shadow: 0px 2px 5px 0px $gray-light;
+      position: relative;
+      transition: all 0.6s;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      .img-wrap {
+        backface-visibility: hidden;
+        height: 0;
+        padding-bottom: 60%;
+        overflow: hidden;
+        position: relative;
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .text-wrap {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: rotateY(180deg);
+        padding: 20px 20px 50px;
+        .title {
+          margin: 0 0 20px;
+        }
+        .summary {
+          color: $gray-lighter;
+        }
+        .demo-link {
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+        }
+      }
+    }
+    &:hover {
+      .content-wrap {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}

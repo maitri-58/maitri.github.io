@@ -2,6 +2,27 @@
 @import "break-points";
 
 .skills-section {
+  .section-title {
+    position: relative;
+    @include bp(xxl-min) {
+      writing-mode: vertical-lr;
+      position: absolute;
+      left: -100px;
+      top: 0;
+      &::after {
+        left: -2px;
+        width: 2px;
+        height: 42%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .skills-wrapper {
+    @include bp(xxl-min) {
+      padding-left: 100px;
+    }
+  }
   .skills-slider {
     text-align: center;
     @include bp(md-min) {
@@ -50,6 +71,110 @@
         &.slick-active {
           width: 22px;
           background: $gray-dark;
+        }
+      }
+    }
+  }
+  .skills-list {
+    width: 170px;
+    flex: 0 0 170px;
+    margin: 0 30px 0 0;
+    @include bp(xxl-max) {
+      width: 140px;
+      flex: 0 0 140px;
+      margin: 0 15px 0 0;
+    }
+    @include bp(md-max) {
+      width: 100%;
+      flex: 0 0 100%;
+      margin: 0;
+    }
+    li {
+      padding: 0 0 20px;
+      margin: 0 0 10px;
+      position: relative;
+      border-bottom: 1px solid $gray-light;
+      @include bp(md-max) {
+        padding-right: 100px;
+      }
+      &:last-child {
+        margin: 0;
+      }
+      .btn {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0;
+        width: auto;
+        @include bp(md-max) {
+          right: 0;
+          top: 0;
+          bottom: auto;
+          left: auto;
+        }
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        transition: all 0.3s;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+      &.react {
+        &::after {
+          background: $blue1;
+        }
+      }
+      &.redux {
+        &::after {
+          background: $purple1;
+        }
+      }
+      &.typescript {
+        &::after {
+          background: $blue2;
+        }
+      }
+      &.next {
+        &::after {
+          background: $black;
+        }
+      }
+      &.html {
+        &::after {
+          background: $orange1;
+        }
+      }
+      &.css {
+        &:after {
+          background: $blue3;
+        }
+      }
+      &.sass {
+        &::after {
+          background: $pink1;
+        }
+      }
+      &.javascript {
+        &:after {
+          background: $yellow1;
+        }
+      }
+      &.bootstrap {
+        &::after {
+          background: $purple2;
+        }
+      }
+      &.tailwindcss {
+        &::after {
+          background: $blue4;
         }
       }
     }

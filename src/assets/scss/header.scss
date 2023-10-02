@@ -6,7 +6,7 @@
   .site-logo {
     width: 44px;
     @include bp(md-max) {
-      width: 25px;
+      width: 30px;
     }
   }
   .email-link {
@@ -33,7 +33,7 @@
       position: absolute;
       content: "";
       right: 0;
-      background: $white;
+      background: $black;
       width: 100%;
     }
     span {
@@ -58,7 +58,7 @@
       height: 100%;
       z-index: 2;
       transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      background: $blue-light;
+      background: $white;
       padding: 50px 20px;
       transform: translateY(-100%);
     }

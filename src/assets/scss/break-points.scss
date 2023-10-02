@@ -6,6 +6,8 @@
   $lg-max: "(max-width: 991px)";
   $xl-max: "(max-width: 1199px)";
   $xxl-max: "(max-width: 1399px)";
+  $xxl-min: "(min-width: 1400px)";
+  $xl-h-max: "(max-height: 800px)";
 
   @if $point==sm-max {
     @media #{$sm-max} {
@@ -29,6 +31,14 @@
     }
   } @else if $point==xxl-max {
     @media #{$xxl-max} {
+      @content;
+    }
+  }@else if $point==xxl-min {
+    @media #{$xxl-min} {
+      @content;
+    }
+  }@else if $point==xl-h-max {
+    @media #{$xl-h-max} {
       @content;
     }
   }

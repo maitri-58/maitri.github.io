@@ -8,6 +8,10 @@ $secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: $primary-font;
 }
 
+.font-secondary {
+  font-family: $secondary-font;
+}
+
 .fw-semibold {
   font-weight: 600;
 }
@@ -46,11 +50,18 @@ $secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 .fs-30 {
   font-size: 30px;
   line-height: 40px;
+  @include bp(xl-h-max) {
+    font-size: 26px;
+    line-height: 34px;
+  }
 }
 
 .fs-38 {
   font-size: 38px;
   line-height: 1.5em;
+  @include bp(xl-h-max) {
+    font-size: 32px;
+  }
 }
 
 .fs-50 {

@@ -1,13 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import Home from "../home";
 import About from "../about";
 import Skills from "../skills";
 
-const Landing = () => {
-  const wrapRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+const Landing = ({ wrapRef, setActiveIndex }) => {
   let scrollDown = null,
     touchStartY,
     touchEndY;
@@ -19,9 +15,11 @@ const Landing = () => {
     if (activeDiv?.nextSibling !== null) {
       activeDiv?.classList?.remove("active");
       activeDiv?.nextSibling?.classList?.add("active");
-      wrapRef.current.style.transform = `translateY(calc(-${
-        +activeIdx + 1
-      } * 100%))`;
+      if (wrapRef && wrapRef.current) {
+        wrapRef.current.style.transform = `translateY(calc(-${
+          +activeIdx + 1
+        } * 100%))`;
+      }
       setActiveIndex(+activeIdx + 1);
     }
   };
@@ -33,12 +31,18 @@ const Landing = () => {
     if (activeDiv?.previousSibling !== null) {
       activeDiv?.classList?.remove("active");
       activeDiv?.previousSibling?.classList?.add("active");
-      wrapRef.current.style.transform = `translateY(calc(-${
-        +activeIdx - 1
-      } * 100%))`;
+      if (wrapRef && wrapRef.current) {
+        wrapRef.current.style.transform = `translateY(calc(-${
+          +activeIdx - 1
+        } * 100%))`;
+      }
       setActiveIndex(+activeIdx - 1);
     }
   };
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, []);
 
   function createWheelStopListener(element, callback, timeout) {
     var handle = null;
@@ -99,7 +103,6 @@ const Landing = () => {
 
   return (
     <>
-      <Header activeIndex={activeIndex} setActiveIndex={setActiveIndex} wrapRef={wrapRef} />
       <div className="sections-wrapper">
         <div className="sections-wrap" ref={wrapRef}>
           <section className="portfolio-section active" id={"section-0"}>

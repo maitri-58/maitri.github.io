@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
+import { motion, wrap } from "framer-motion";
 
 /* import scss */
 import "../assets/scss/header.scss";
@@ -11,13 +11,15 @@ import FadeIn from "./animations/FadeIn";
 import { headerMenuList } from "../mock/mock";
 
 const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
+  const location = useLocation();
   const toggleMenu = () => {
     document.body.classList.toggle("menu-open");
   };
   const handleClick = (idx) => {
-    setActiveIndex(idx);
     document.body.classList.remove("menu-open");
-    wrapRef.current.style.transform = `translateY(calc(-${idx} * 100%))`;
+    if (wrapRef && wrapRef.current) {
+      wrapRef.current.style.transform = `translateY(calc(-${idx} * 100%))`;
+    }
   };
   return (
     <div className="site-header">
@@ -35,47 +37,81 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
             }}
           />
         </Link>
-        <div className="position-relative">
+        <div className="position-relative header-menu-wrap">
           <span className="humburg-menu" onClick={toggleMenu}>
             <span></span>
           </span>
-          <ul className="d-flex flex-md-row flex-column align-items-md-start align-items-center justify-content-md-start justify-content-center header-menu">
-            {headerMenuList?.map((menuItem, idx) => {
-              return (
-                <li
-                  className={`${
-                    idx !== headerMenuList?.length - 1 ? "me-md-4" : ""
-                  } mb-4 mb-md-0 position-relative ${
-                    activeIndex === idx ? "active" : ""
-                  }`}
-                  key={idx}
-                  onClick={() => {
-                    handleClick(idx);
-                  }}
-                >
-                  <FadeIn>
-                    <a
-                      href={"javascript:void(0)"}
-                      title={menuItem?.title}
-                      className="d-flex align-items-center fs-18 position-relative"
-                    >
-                      {menuItem?.title}
-                    </a>
-                  </FadeIn>
-                </li>
-              );
-            })}
-          </ul>
+          {location.pathname !== "/work" && (
+            <ul className="d-flex flex-md-row flex-column align-items-md-start align-items-center justify-content-md-start justify-content-center header-menu">
+              {headerMenuList?.map((menuItem, idx) => {
+                return (
+                  <motion.li
+                    className={`${
+                      idx !== headerMenuList?.length - 1 ? "me-md-4" : ""
+                    } mb-4 mb-md-0 position-relative ${
+                      activeIndex === idx ? "active" : ""
+                    }`}
+                    key={idx}
+                    onClick={() => {
+                      setActiveIndex(idx);
+                      !menuItem.url && handleClick(idx);
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 1,
+                    }}
+                  >
+                    {!menuItem.url ? (
+                      <a
+                        href={"javascript:void(0)"}
+                        title={menuItem?.title}
+                        className="d-flex align-items-center fs-18 position-relative"
+                      >
+                        {menuItem?.title}
+                      </a>
+                    ) : (
+                      <Link
+                        to={menuItem?.url}
+                        className="d-flex align-items-center fs-18 position-relative"
+                      >
+                        {menuItem?.title}
+                      </Link>
+                    )}
+                  </motion.li>
+                );
+              })}
+            </ul>
+          )}
         </div>
-        <div className="right-block">
+        <div className="right-block d-none d-md-block">
           <div className="d-block">
-            <a href="" className="email-link fs-18">
-              <FadeIn>07587537470</FadeIn>
-            </a>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                delay: 1,
+              }}
+              href=""
+              className="email-link fs-18"
+            >
+              07587537470
+            </motion.a>
           </div>
-          <a href="mailTo:mait.ch1997@gmail.com" className="email-link fs-18">
-            <FadeIn>mait.ch1997@gmail.com</FadeIn>
-          </a>
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.4,
+              delay: 1,
+            }}
+            href="mailTo:mait.ch1997@gmail.com"
+            className="email-link fs-18"
+          >
+            mait.ch1997@gmail.com
+          </motion.a>
         </div>
       </div>
     </div>

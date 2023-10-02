@@ -1,17 +1,35 @@
+import React, { useState, useRef } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 import Splash from "./pages/splash";
 import Landing from "./pages/landing";
-import React from "react";
 import "./assets/scss/style.scss";
-import { BrowserRouter } from "react-router-dom";
+import Work from "./pages/work";
 
 function App() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const wrapRef = useRef(null);
   return (
-    <BrowserRouter>
+    <Router>
       <div className="app">
         <Splash />
-        <Landing />
+        <Header
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          wrapRef={wrapRef}
+        />
+        <Routes>
+          <Route
+            path="/"
+            exact
+            element={
+              <Landing wrapRef={wrapRef} setActiveIndex={setActiveIndex} />
+            }
+          ></Route>
+          <Route path="/work" exact element={<Work />}></Route>
+        </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

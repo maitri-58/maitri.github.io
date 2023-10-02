@@ -1,14 +1,57 @@
+@import "break-points";
 @import "colors";
 
 .about-section {
   .about {
-    width: 900px;
+    width: 500px;
     max-width: 86%;
-    margin: 0 auto;
     a {
       &:hover {
         color: $black;
       }
+    }
+  }
+  .section-title {
+    &::after {
+      left: 0;
+      right: auto;
+      transform: translateX(0);
+    }
+  }
+  .section-title-wrap{
+    @include bp(xl-h-max){
+      margin-bottom: 30px !important;
+      padding-bottom: 20px !important;
+    }
+  }
+  .portrait-wrap {
+    height: 470px;
+    width: 470px;
+    -webkit-clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%
+    );
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    @include bp(xxl-max) {
+      height: 370px;
+      width: 370px;
+    }
+    @include bp(xl-max) {
+      height: 340px;
+      width: 340px;
+    }
+    @include bp(lg-max) {
+      height: 290px;
+      width: 290px;
+    }
+    @include bp(md-max) {
+      // transform: none !important;
+      height: 253px;
+      width: 253px;
     }
   }
 }

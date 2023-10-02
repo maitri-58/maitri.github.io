@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import "../../assets/scss/home.scss";
 
 /* import images */
-import portraitImg from "../../assets/images/portrait.jpg";
+import portraitImg from "../../assets/images/portrait.jpeg";
 
 const Home = () => {
   const line1 = "Frontend Developer";
