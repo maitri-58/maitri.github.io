@@ -26,7 +26,6 @@ function App() {
               <Landing wrapRef={wrapRef} setActiveIndex={setActiveIndex} />
             }
           ></Route>
-          <Route path="/portfolio/work" exact element={<Work />}></Route>
         </Routes>
       </div>
     </Router>

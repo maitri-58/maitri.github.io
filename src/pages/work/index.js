@@ -9,7 +9,7 @@ import "../../assets/scss/work.scss";
 const Work = () => {
   const location = useLocation();
   return (
-    <div className="sections-wrapper">
+    <div className="work-section">
       <div className="container-lg h-100">
         <motion.p
           className="text text-center mb-md-4 mb-3"

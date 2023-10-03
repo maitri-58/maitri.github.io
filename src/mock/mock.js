@@ -16,7 +16,7 @@ export const headerMenuList = [
   },
   {
     title: "Work",
-    url: "/portfolio/work",
+    // url: "/work",
     icon: "resume.svg",
   },
 ];
