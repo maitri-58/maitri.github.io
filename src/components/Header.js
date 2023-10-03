@@ -41,7 +41,7 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
           <span className="humburg-menu" onClick={toggleMenu}>
             <span></span>
           </span>
-          {location.pathname !== "/work" && (
+          {location.pathname !== "/portfolio/work" && (
             <ul className="d-flex flex-md-row flex-column align-items-md-start align-items-center justify-content-md-start justify-content-center header-menu">
               {headerMenuList?.map((menuItem, idx) => {
                 return (
