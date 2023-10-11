@@ -14,11 +14,11 @@ export const headerMenuList = [
     // url: "/skills",
     icon: "resume.svg",
   },
-  {
-    title: "Work",
-    // url: "/work",
-    icon: "resume.svg",
-  },
+  // {
+  //   title: "Work",
+  //   // url: "/work",
+  //   icon: "resume.svg",
+  // },
 ];
 
 export const skillSet = [

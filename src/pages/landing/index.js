@@ -115,9 +115,9 @@ const Landing = ({ wrapRef, setActiveIndex }) => {
           <section className="portfolio-section" id={"section-2"}>
             <Skills />
           </section>
-          <section className="portfolio-section" id={"section-3"}>
+          {/* <section className="portfolio-section" id={"section-3"}>
             <Work />
-          </section>
+          </section> */}
         </div>
       </div>
       {/* <Footer /> */}
