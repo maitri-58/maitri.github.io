@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.0ce13157.css",
-    "main.js": "/portfolio/static/js/main.74784747.js",
+    "main.css": "/portfolio/static/css/main.5e2d762b.css",
+    "main.js": "/portfolio/static/js/main.af479cf8.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/bg1.jpg": "/portfolio/static/media/bg1.1d0041424a2b51ee08d0.jpg",
     "static/media/typescript.jpg": "/portfolio/static/media/typescript.1437f74da84bdd50e97c.jpg",
@@ -11,6 +11,7 @@
     "static/media/portrait-old.jpg": "/portfolio/static/media/portrait-old.f32c411d8270f5d9fb89.jpg",
     "static/media/tailwindcss.jpg": "/portfolio/static/media/tailwindcss.fb84ace95bb919daa678.jpg",
     "static/media/portrait.jpeg": "/portfolio/static/media/portrait.8ca06b08b5af95315a8a.jpeg",
+    "static/media/book-store-cover.jpg": "/portfolio/static/media/book-store-cover.4172bf8de18c2e60412e.jpg",
     "static/media/redux.jpg": "/portfolio/static/media/redux.170eb0c41f493b345628.jpg",
     "static/media/css.jpg": "/portfolio/static/media/css.b88cd87d99fb7b6a0009.jpg",
     "static/media/reactjs.jpg": "/portfolio/static/media/reactjs.c0e8ca45355fd1d3795b.jpg",
@@ -22,12 +23,12 @@
     "static/media/shelf.svg": "/portfolio/static/media/shelf.76f6a7435bcbaf39614c.svg",
     "static/media/work.svg": "/portfolio/static/media/work.3d55d9af7a7d56af9a3b.svg",
     "index.html": "/portfolio/index.html",
-    "main.0ce13157.css.map": "/portfolio/static/css/main.0ce13157.css.map",
-    "main.74784747.js.map": "/portfolio/static/js/main.74784747.js.map",
+    "main.5e2d762b.css.map": "/portfolio/static/css/main.5e2d762b.css.map",
+    "main.af479cf8.js.map": "/portfolio/static/js/main.af479cf8.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ce13157.css",
-    "static/js/main.74784747.js"
+    "static/css/main.5e2d762b.css",
+    "static/js/main.af479cf8.js"
   ]
 }
