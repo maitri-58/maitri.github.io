@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, wrap } from "framer-motion";
+import { motion } from "framer-motion";
 
 /* import scss */
 import "../assets/scss/header.scss";
 
 /* import images */
 import logoImg from "../assets/images/logo.png";
-import FadeIn from "./animations/FadeIn";
 import { headerMenuList } from "../mock/mock";
 
 const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
   const location = useLocation();
+  console.log(location,"is location")
   const toggleMenu = () => {
     document.body.classList.toggle("menu-open");
   };
@@ -95,7 +95,8 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
                 duration: 0.4,
                 delay: 1,
               }}
-              href=""
+              href="https://api.whatsapp.com/send?phone=07587537470"
+              target="_blank"
               className="email-link fs-18"
             >
               07587537470

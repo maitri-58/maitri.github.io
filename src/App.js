@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Splash from "./pages/splash";
 import Landing from "./pages/landing";
@@ -26,6 +26,7 @@ function App() {
               <Landing wrapRef={wrapRef} setActiveIndex={setActiveIndex} />
             }
           ></Route>
+          <Route path="/work" element={<Work />} />
         </Routes>
       </div>
     </Router>

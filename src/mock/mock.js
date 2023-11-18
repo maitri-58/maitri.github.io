@@ -14,11 +14,11 @@ export const headerMenuList = [
     // url: "/skills",
     icon: "resume.svg",
   },
-  // {
-  //   title: "Work",
-  //   // url: "/work",
-  //   icon: "resume.svg",
-  // },
+  {
+    title: "Work",
+    // url: "/work",
+    icon: "resume.svg",
+  },
 ];
 
 export const skillSet = [
@@ -87,30 +87,10 @@ export const skillSet = [
 export const workList = [
   {
     wId: 0,
-    title: "Pokemon App",
-    summary: "Pokemon App is a demo project built in react, redux, typescript, next.js.",
-    coverImg: "pokemon-cover.jpg",
-    largeImg: "pokemon-cover.jpg"
-  },
-  {
-    wId: 1,
-    title: "Pokemon App",
-    summary: "Pokemon App is a demo project built in react, redux, typescript, next.js.",
-    coverImg: "pokemon-cover.jpg",
-    largeImg: "pokemon-cover.jpg"
-  },
-  {
-    wId: 2,
-    title: "Pokemon App",
-    summary: "Pokemon App is a demo project built in react, redux, typescript, next.js.",
-    coverImg: "pokemon-cover.jpg",
-    largeImg: "pokemon-cover.jpg"
-  },
-  {
-    wId: 3,
-    title: "Pokemon App",
-    summary: "Pokemon App is a demo project built in react, redux, typescript, next.js.",
-    coverImg: "pokemon-cover.jpg",
-    largeImg: "pokemon-cover.jpg"
+    title: "Book Store",
+    summary: "It is an online book store app created with data of new york best seller APIs.",
+    url: "https://maitri-97.github.io/book-store/",
+    techStack: "React, Typescript, Context API, CSS",
+    coverImg: "book-store-cover.jpg"
   },
 ]

@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Home from "../home";
 import About from "../about";
 import Skills from "../skills";
+import Work from "../../../src/pages/work";
 
 const Landing = () => {
   const wrapRef = useRef(null);

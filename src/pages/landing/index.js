@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import Home from "../home";
 import About from "../about";
 import Skills from "../skills";
 import Work from "../work";
 
-const Landing = ({ wrapRef, setActiveIndex }) => {
+const Landing = ({ wrapRef = null, setActiveIndex = () => {} }) => {
   let scrollDown = null,
     touchStartY,
     touchEndY;
@@ -115,9 +115,9 @@ const Landing = ({ wrapRef, setActiveIndex }) => {
           <section className="portfolio-section" id={"section-2"}>
             <Skills />
           </section>
-          {/* <section className="portfolio-section" id={"section-3"}>
+          <section className="portfolio-section" id={"section-3"}>
             <Work />
-          </section> */}
+          </section>
         </div>
       </div>
       {/* <Footer /> */}

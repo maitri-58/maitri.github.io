@@ -35,7 +35,7 @@ const About = () => {
       <div className="about-section d-flex align-items-center justify-content-center h-100 py-4">
         <div className="container-lg h-100">
           <div className="row align-items-center align-content-center h-100">
-            <div className="col-md-6 d-flex aling-items-center custom-md-order-2">
+            <div className="col-md-6 d-flex aling-items-center custom-md-order-2 mt-md-0 mt-3 justify-content-md-start justify-content-center">
               <motion.div
                 className="portrait-wrap bg-gray-dark"
                 initial={{ translateX: "-40%" }}
@@ -74,7 +74,6 @@ const About = () => {
                 initial={{ opacity: 0, y: "10px" }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                // animate={{ opacity: "1" }}
                 transition={{
                   duration: 0.5,
                   delay: 0.6,

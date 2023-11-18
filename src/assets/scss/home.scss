@@ -7,6 +7,12 @@
   background: $black url("../images/bg1.jpg") no-repeat center -113px;
   overflow: hidden;
   position: relative;
+  @media (max-height: 600px) {
+    height: calc(100vh - 84px);
+    @include bp(md-max) {
+      height: calc(100vh - 46px);
+    }
+  }
   .content-wrapper {
     position: relative;
     z-index: 2;

@@ -5,6 +5,10 @@
   .about {
     width: 500px;
     max-width: 86%;
+    @include bp(md-max) {
+      width: 100%;
+      max-width: 100%;
+    }
     a {
       &:hover {
         color: $black;
@@ -18,8 +22,8 @@
       transform: translateX(0);
     }
   }
-  .section-title-wrap{
-    @include bp(xl-h-max){
+  .section-title-wrap {
+    @include bp(xl-h-max) {
       margin-bottom: 30px !important;
       padding-bottom: 20px !important;
     }
