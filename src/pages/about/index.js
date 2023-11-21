@@ -43,7 +43,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.6,
-                  delay: 0.2
+                  delay: 0.2,
                 }}
               >
                 <img
@@ -79,9 +79,9 @@ const About = () => {
                   delay: 0.6,
                 }}
               >
-                Hey there! 👋. I'm Maitri, a software engineer based in London, UK, that
-                loves to code and build products with a delightful user
-                experience. Currently working at{" "}
+                Hey there! 👋. I'm Maitri, a software engineer based in London,
+                UK, that loves to code and build products with a delightful user
+                experience. I have worked at{" "}
                 <a
                   href="https://viitorcloud.com/"
                   target="_blank"
@@ -89,8 +89,7 @@ const About = () => {
                 >
                   ViitorCloud Technologies
                 </a>{" "}
-                as a Frontend React Developer, building a port management
-                system. Before that I worked at{" "}
+                as a Frontend(javascript) Developer. Before that I worked at{" "}
                 <a
                   href="https://www.tatvasoft.com/"
                   target="_blank"

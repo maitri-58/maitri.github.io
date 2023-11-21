@@ -20,7 +20,7 @@ const Skills = () => {
 
   return (
     <>
-      <div className="skills-section h-100 py-4">
+      <div className="skills-section h-100 py-4 d-flex align-content-center align-items-center">
         <div className="container-lg">
           <div className="row flex-row">
             <div className="skills-wrapper position-relative d-flex flex-wrap">

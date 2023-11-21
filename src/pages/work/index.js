@@ -55,7 +55,7 @@ const Work = () => {
                       <p className="fs-16 font-secondary summary mb-3">
                         {workItem?.summary}
                       </p>
-                      <p className="fs-16 font-secondary summary">
+                      <p className="fs-16 font-secondary summary mb-3">
                         <span className="text-gray-dark">Technologoies:</span>{" "}
                         {workItem?.techStack}
                       </p>

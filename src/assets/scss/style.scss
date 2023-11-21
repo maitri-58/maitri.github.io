@@ -15,6 +15,14 @@ body,
   height: 100%;
 }
 
+.main-wrap {
+  @include bp(md-max) {
+    @media (max-height: 700px) {
+      padding-top: 46px;
+    }
+  }
+}
+
 .app {
   overflow-x: hidden;
 }
@@ -45,11 +53,12 @@ ul {
   height: calc(100% - 84px);
   overflow: hidden;
   @include bp(md-max) {
-    // height: auto;
     height: calc(100% - 46px);
   }
-  @media (max-height: 600px) {
-    height: auto !important;
+  @include bp(md-max) {
+    @media (max-height: 700px) {
+      height: auto !important;
+    }
   }
 }
 
@@ -57,8 +66,10 @@ ul {
   height: 100%;
   transform: translateY(0);
   transition: all 0.6s ease-in-out;
-  @media (max-height: 600px) {
-    transform: none !important;
+  @include bp(md-max) {
+    @media (max-height: 700px) {
+      transform: none !important;
+    }
   }
 }
 .portfolio-section {

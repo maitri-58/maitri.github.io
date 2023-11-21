@@ -10,24 +10,23 @@ import logoImg from "../assets/images/logo.png";
 import { headerMenuList } from "../mock/mock";
 
 const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
-  const location = useLocation();
-  console.log(location,"is location")
   const toggleMenu = () => {
     document.body.classList.toggle("menu-open");
   };
-  const handleClick = (idx) => {
+  const handleClick = (e, idx) => {
     document.body.classList.remove("menu-open");
     if (wrapRef && wrapRef.current) {
       wrapRef.current.style.transform = `translateY(calc(-${idx} * 100%))`;
+    }
+    if (window.innerWidth < 768 && window.innerHeight <= 700) {
+      const id = e.target.getAttribute('data-id');
+      document.getElementById(id).scrollIntoView();
     }
   };
   return (
     <div className="site-header">
       <div className="d-flex align-items-center justify-content-between container-lg py-md-3 py-2">
-        <Link
-          to={"/"}
-          className="d-inline-block me-md-5 me-3 site-logo"
-        >
+        <Link to={"/"} className="d-inline-block me-md-5 me-3 site-logo">
           <motion.img
             src={logoImg}
             alt="logo"
@@ -54,9 +53,9 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
                     activeIndex === idx ? "active" : ""
                   }`}
                   key={idx}
-                  onClick={() => {
+                  onClick={(e) => {
                     setActiveIndex(idx);
-                    !menuItem.url && handleClick(idx);
+                    !menuItem.url && handleClick(e, idx);
                   }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -67,6 +66,7 @@ const Header = ({ activeIndex, setActiveIndex = () => {}, wrapRef }) => {
                 >
                   {!menuItem.url ? (
                     <a
+                      data-id={`section-${idx}`}
                       href={"javascript:void(0)"}
                       title={menuItem?.title}
                       className="d-flex align-items-center fs-18 position-relative"
